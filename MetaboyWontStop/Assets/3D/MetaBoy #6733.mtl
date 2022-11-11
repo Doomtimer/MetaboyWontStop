@@ -1,0 +1,34 @@
+newmtl Weapon_Yatagan
+Kd 1 1 1
+map_Kd Weapon_Yatagan_Diffuse.png
+illum 2
+
+newmtl Waist_WarriorBelt
+Kd 1 1 1
+map_Kd WarriorBelt_Diffuse.png
+illum 2
+
+newmtl SchoolBoy
+Kd 1 1 1
+map_Kd SchoolBoy_Diffuse_Map.png
+illum 2
+
+newmtl Arms_01
+Kd 1 1 1
+map_Kd Arms_Diffuse_Map.png
+illum 2
+
+newmtl Face_Black
+Kd 0 0 0
+map_Kd Goatee.png
+illum 2
+
+newmtl Legs_01
+Kd 1 1 1
+map_Kd Legs_Diffuse_Map.png
+illum 2
+
+newmtl BackScreen_0
+Kd 0.4784312 0.8039217 0.7843137
+illum 2
+
