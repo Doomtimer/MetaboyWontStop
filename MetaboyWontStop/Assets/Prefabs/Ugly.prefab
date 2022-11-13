@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4390008545658014163}
   - component: {fileID: 4390008545658014172}
   - component: {fileID: 4390008545658014160}
+  - component: {fileID: 8051865820493416025}
   m_Layer: 0
   m_Name: Ugly
   m_TagString: Ugly
@@ -109,3 +110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc617edaf1242f14ba2ecde26631d3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &8051865820493416025
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4390008545658014173}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

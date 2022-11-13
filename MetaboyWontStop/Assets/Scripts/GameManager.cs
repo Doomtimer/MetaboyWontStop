@@ -60,24 +60,27 @@ public class GameManager : MonoBehaviour
             Spawnpoint3.position -= new Vector3(0, 0, 1);*/
             spawnable = false;
             timer = 0.1f;
-            int prefab = Random.Range(0, 2);
+            int prefab = Random.Range(0, 3);
             Instances.Add(Instantiate(Boxes[prefab], Spawnpoint1));
             
 
             switch (prefab)
             {
                 case 0:
-                    int prefab1 = Random.Range(1, 2);
-                    Instances.Add(Instantiate(Boxes[prefab1], Spawnpoint2));
-                    switch (prefab1)
+                   int prefab1;
+                    if (Random.value < 0.5f)
                     {
-                        case 1:
-                            Instances.Add(Instantiate(Boxes[2], Spawnpoint3));
-                            break;
-                        case 2:
-                            Instances.Add(Instantiate(Boxes[1], Spawnpoint3));
-                            break;
+                        prefab1 = 1;
+                        Instances.Add(Instantiate(Boxes[prefab1], Spawnpoint2));
+                        Instances.Add(Instantiate(Boxes[2], Spawnpoint3));
                     }
+                    else
+                    {
+                        prefab1 = 2;
+                        Instances.Add(Instantiate(Boxes[prefab1], Spawnpoint2));
+                        Instances.Add(Instantiate(Boxes[1], Spawnpoint3));
+                    }
+
                     break;
                 case 1:
                     int prefab2;

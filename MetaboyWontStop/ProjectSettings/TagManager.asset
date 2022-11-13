@@ -7,6 +7,7 @@ TagManager:
   - Good
   - Bad
   - Ugly
+  - speed
   layers:
   - Default
   - TransparentFX

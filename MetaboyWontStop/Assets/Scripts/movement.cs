@@ -35,7 +35,15 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerAnim.SetFloat("Speed", speed / 5);
+        if(speed<15)
+        {
+            playerAnim.SetFloat("Speed", speed / 5);
+        }
+        else
+        {
+            playerAnim.SetFloat("Speed", 3);
+        }
+        
         if(Intro.Instance.GameStart)
         {
             speedText.text = "SPEED: "+ Mathf.Round(speed).ToString();
