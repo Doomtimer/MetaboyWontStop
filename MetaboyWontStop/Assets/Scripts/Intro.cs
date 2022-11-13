@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Intro : MonoBehaviour
 {
     public static Intro Instance;
 
     public bool GameStart;
+    public bool follow;
     public Texture Sip1,Sip2,Sip3,Sip4,Sip5,Sip6;
     public Renderer faceRenderer;
 
@@ -14,6 +16,11 @@ public class Intro : MonoBehaviour
 
     public Animator MetaBoyAnim;
     public cameraScript camScript;
+
+
+    public TMP_Text startText;
+
+    float switchTimer;
     private void Awake()
     {
         Instance = this;
@@ -24,7 +31,29 @@ public class Intro : MonoBehaviour
 
     void Update()
     {
-        
+        switchTimer += Time.deltaTime;
+
+        if(!GameStart)
+        {
+            if (switchTimer > 0.3f)
+            {
+                if(startText.color == Color.red)
+                {
+                    startText.color = Color.black;
+                }
+                else
+                {
+                    startText.color = Color.red;
+                }
+                
+                switchTimer = 0f;
+            }
+           
+        }
+        else
+        {
+            startText.gameObject.SetActive(false);
+        }
        
     }
 
@@ -47,8 +76,8 @@ public class Intro : MonoBehaviour
 
         MetaBoyAnim.SetBool("run", true);
         GameStart = true;
+        GameManager.Instance.SpawnBlocks();
         yield return new WaitForSeconds(1.5f);
-        camScript.follow = true;
-
+        follow = true;
     }
 }
